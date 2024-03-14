@@ -1,0 +1,21 @@
+{
+  "loglevel": "verbose",
+  "version": "0.0.0",
+  "packages": ["."],
+  "command": {
+    "version": {
+      "allowBranch": ["main"],
+      "message": "chore(release): bump version %v",
+      "conventionalCommits": true,
+      "forceGitTag": false,
+      "changelog": false,
+      "yes": false,
+      "push": false,
+      "gitTagVersion": false,
+      "tagVersionPrefix": "v",
+      "commitHooks": true
+    }
+  },
+  "npmClient": "pnpm",
+  "$schema": "node_modules/lerna/schemas/lerna-schema.json"
+}
