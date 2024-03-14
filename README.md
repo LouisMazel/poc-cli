@@ -11,6 +11,7 @@
   - [Filtering database by animal name pattern](#filtering-database-by-animal-name-pattern)
   - [Count](#count)
 - [Development](#development)
+  - [Run the CLI](#run-the-cli)
   - [Build](#build)
   - [Lint and format code](#lint-and-format-code)
   - [Test](#test)
@@ -39,13 +40,14 @@ pnpm install
 ### Run the built CLI
 
 ```bash
-pnpm build && pnpm start
+pnpm start [--filter=ry] [--count]
+# or node dist/cli.mjs [--filter=ry] [--count]
 ```
 
 ### Run CLI with Typescript (development)
 
 ```bash
-pnpm cli
+pnpm dev [--filter=ry] [--count]
 ```
 
 ## Commands
@@ -55,7 +57,11 @@ pnpm cli
 Use the flag `--filter={pattern}` to filter the database by animal names that match the pattern.
 
 ```bash
-node app.js --filter=ry
+# command:
+
+node dist/cli.mjs --filter=ry
+
+# output:
 
 Results:
 
@@ -94,7 +100,11 @@ Results:
 Use the flag `--count` to count the number in each country and the number of animals each person has.
 
 ```bash
-node app.js --count
+# command:
+
+node dist/cli.mjs --count
+
+# output:
 
 Results:
 
@@ -124,6 +134,14 @@ Results:
 ```
 
 ## Development
+
+### Run the CLI
+
+To run the CLI with Typescript, run:
+
+```bash
+pnpm dev [--filter=ry] [--count]
+```
 
 ### Build
 
