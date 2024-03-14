@@ -1,6 +1,6 @@
 {
   "loglevel": "verbose",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "packages": ["."],
   "command": {
     "version": {

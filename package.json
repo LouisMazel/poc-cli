@@ -3,7 +3,7 @@
   "description": "Adeo CLI",
   "author": "Loïc Mazuel",
   "license": "MIT",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "main": "./dist/cli.mjs",
   "types": "./dist/cli.d.ts",
   "engines": {
