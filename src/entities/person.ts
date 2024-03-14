@@ -3,6 +3,7 @@ import { Animal } from './animal'
 
 export class Person {
   public animals: Animal[]
+
   constructor(
     public name: string,
     data: DatasetAnimal[],
@@ -10,7 +11,7 @@ export class Person {
     this.animals = data.map((animal) => new Animal(animal.name))
   }
 
-  get animalsCount() {
+  public get animalsCount() {
     return this.animals.length
   }
 }
