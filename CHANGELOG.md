@@ -1,5 +1,21 @@
 # Changelog
 
+## v0.1.1...v0.1.2
+
+[compare changes](https://github.com/LouisMazel/poc-cli/compare/v0.1.1...v0.1.2)
+
+### 💅 Refactors
+
+- Export database and his methods to be used as a library ([cfa3d85](https://github.com/LouisMazel/poc-cli/commit/cfa3d85))
+
+### 🏡 Chore
+
+- Remove and ignore .DS_Store ([8493130](https://github.com/LouisMazel/poc-cli/commit/8493130))
+
+### ❤️ Contributors
+
+- LouisMazel <me@loicmazuel.com>
+
 ## v0.1.0...v0.1.1
 
 [compare changes](https://github.com/LouisMazel/poc-cli/compare/v0.1.0...v0.1.1)
