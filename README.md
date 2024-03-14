@@ -1,4 +1,25 @@
-# ADEO-CLI
+<h1>ADEO-CLI</h1>
+
+<h2>Table of Contents</h2>
+
+- [Pre-requisites](#pre-requisites)
+- [Installation](#installation)
+- [Usage](#usage)
+  - [Run the built CLI](#run-the-built-cli)
+  - [Run CLI with Typescript (development)](#run-cli-with-typescript-development)
+- [Commands](#commands)
+  - [Filtering database by animal name pattern](#filtering-database-by-animal-name-pattern)
+  - [Count](#count)
+- [Development](#development)
+  - [Build](#build)
+  - [Lint and format code](#lint-and-format-code)
+  - [Test](#test)
+- [Release new version](#release-new-version)
+- [Code and commit quality](#code-and-commit-quality)
+  - [Dependencies](#dependencies)
+  - [Hooks](#hooks)
+  - [Tools](#tools)
+- [Continuous Integration](#continuous-integration)
 
 ## Pre-requisites
 
@@ -160,8 +181,41 @@ pnpm release
 
 This command will:
 
-- Bump the version in the `package.json` file
+- Bump the version in the `package.json` file according to the conventional commits and the semver rules
 - Create a new tag in the repository
 - Push the new tag to the repository
 - Generate a new release in the CHANGELONG.md file
 - Publish this release in the repository
+
+## Code and commit quality
+
+### Dependencies
+
+- The dependabot is used to keep the dependencies up to date (open pull requests to update the dependencies).
+
+### Hooks
+
+> Handle with Husky
+
+On each commit, the following hooks are executed:
+
+- Run typescript to check for errors
+- Format the code
+- Lint the code
+- Lint the commit message format with commitlint
+
+### Tools
+
+- Prettier is used to format the code.
+- ESLint is used to lint the code.
+- Commitlint and husky are used to enforce the commit message format.
+
+## Continuous Integration
+
+> Use Github Actions
+
+On each pull request to the "main" branch, the following actions are executed and should pass to be merged:
+
+- Run the tests
+- Lint the code
+- Build the app to check for errors
