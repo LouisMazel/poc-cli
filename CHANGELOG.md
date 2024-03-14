@@ -1,5 +1,17 @@
 # Changelog
 
+## v0.1.2...v0.1.3
+
+[compare changes](https://github.com/LouisMazel/poc-cli/compare/v0.1.2...v0.1.3)
+
+### 💅 Refactors
+
+- Include build in dist folder and rename dev command ([c4ee4c3](https://github.com/LouisMazel/poc-cli/commit/c4ee4c3))
+
+### ❤️ Contributors
+
+- LouisMazel <me@loicmazuel.com>
+
 ## v0.1.1...v0.1.2
 
 [compare changes](https://github.com/LouisMazel/poc-cli/compare/v0.1.1...v0.1.2)
