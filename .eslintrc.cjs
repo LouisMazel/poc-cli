@@ -16,7 +16,6 @@ module.exports = {
   parserOptions: {
     ecmaVersion: 'latest',
     sourceType: 'module',
-    project: ['./tsconfig.json'],
   },
   rules: {
     'no-console': [process.env.NODE_ENV === 'production' ? 'error' : 'warn'],

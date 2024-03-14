@@ -1,9 +1,8 @@
 import { exit } from 'node:process'
-import { countPeopleAndAnimals } from '../commands'
-import { type DatasetCountry } from '../repository'
-import { type Database } from '../repository/database'
-import { filterByAnimalQuery } from '../commands/filter-by-animal-query'
 import { logger } from '../utils/logger'
+
+import { countPeopleAndAnimals, filterByAnimalQuery } from '../commands'
+import { type DatasetCountry, type Database } from '../repository'
 
 function parseArguments(arguments_: string[]) {
   if (arguments_.length === 0) {
@@ -34,6 +33,10 @@ function handleCommand(database: Database, command: string, value: string) {
 
   switch (command) {
     case '--filter': {
+      if (!value) {
+        throw new Error('Please provide a value for the filter command.')
+      }
+
       results = filterByAnimalQuery(database, value)
       break
     }
@@ -57,7 +60,7 @@ export function runCLI(data: Database, arguments_: string[]) {
 
     printResults(results)
   } catch (error) {
-    logger.error(error.message ?? error)
+    logger.error(error.message)
     logger.breakline()
 
     exit(1)
