@@ -9,10 +9,6 @@ export class Database {
     this.countries = data.map((country) => new Country(country.name, country.people))
   }
 
-  getCountry(name: string) {
-    return this.countries.filter((country) => country.name.includes(name))
-  }
-
   countPeopleAndAnimals(): DatasetCountry[] {
     try {
       return this.countries.map((country) => ({

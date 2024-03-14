@@ -104,6 +104,16 @@ Results:
 
 ## Development
 
+### Build
+
+> Unbuild is used to build the project.
+
+To build the project, run:
+
+```bash
+pnpm build
+```
+
 ### Lint and format code
 
 > ESLint is used to lint the code.
@@ -129,6 +139,14 @@ To run the tests, run:
 ```bash
 pnpm test
 ```
+
+To run the tests with coverage, run:
+
+```bash
+pnpm test:coverage
+```
+
+Then, open the file `coverage/index.html` in your browser.
 
 ## Release new version
 
