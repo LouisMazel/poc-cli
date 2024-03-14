@@ -9,8 +9,14 @@ const { version } = nodeRequire('../package.json')
 
 printInformationCli(version)
 
-const database = getDatabase()
+export const database = getDatabase()
 
 runCLI(database, process.argv.slice(2))
+
+/**
+ * To be used as a library without CLI (npm package)
+ */
+export const count = database.countPeopleAndAnimals
+export const filter = database.filterByAnimalQuery
 
 export { type DatasetCountry, type DatasetAnimal, type DatasetPerson } from './repository'
