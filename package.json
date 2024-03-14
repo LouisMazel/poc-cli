@@ -30,7 +30,8 @@
     "build": "unbuild",
     "build:stub": "unbuild --stub",
     "pre-commit": "lint-staged",
-    "format": "prettier --ignore-path .gitignore . --write"
+    "format": "prettier --ignore-path .gitignore . --write",
+    "prepare": "husky"
   },
   "lint-staged": {
     "*": "prettier -w -u",
@@ -45,6 +46,8 @@
     "eslint-plugin-promise": "^6.1.1",
     "eslint-plugin-sonarjs": "^0.24.0",
     "eslint-plugin-unicorn": "^51.0.1",
+    "husky": "^9.0.11",
+    "lint-staged": "^15.2.2",
     "prettier": "^3.2.5",
     "ts-node": "^10.9.2",
     "typescript": "^5.4.2",
