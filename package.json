@@ -26,7 +26,7 @@
   "scripts": {
     "lint": "cross-env NODE_ENV=production eslint --ignore-path .gitignore --fix --ext .ts,.js,.mjs,.mts,.cjs .",
     "cli": "node --loader ts-node/esm --no-warnings src/cli.ts",
-    "start": "node dist/cli.js",
+    "start": "node dist/cli.mjs",
     "build": "unbuild",
     "build:stub": "unbuild --stub",
     "pre-commit": "lint-staged",
