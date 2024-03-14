@@ -31,7 +31,10 @@
     "build:stub": "unbuild --stub",
     "pre-commit": "lint-staged",
     "format": "prettier --ignore-path .gitignore . --write",
-    "prepare": "husky"
+    "prepare": "husky",
+    "release": "pnpm release:bump-version && pnpm release:changelogen",
+    "release:bump-version": "lerna version",
+    "release:changelogen": "node --loader ts-node/esm --no-warnings ./changelog-generate.ts"
   },
   "lint-staged": {
     "*": "prettier -w -u",
@@ -41,8 +44,9 @@
     "@commitlint/cli": "^19.1.0",
     "@commitlint/config-conventional": "^19.1.0",
     "@commitlint/cz-commitlint": "^19.1.0",
-    "@typescript-eslint/eslint-plugin": "^7.2.0",
     "@types/node": "^20.11.27",
+    "@typescript-eslint/eslint-plugin": "^7.2.0",
+    "changelogen": "^0.5.5",
     "cross-env": "^7.0.3",
     "eslint": "^8.57.0",
     "eslint-config-prettier": "^9.1.0",
@@ -51,6 +55,7 @@
     "eslint-plugin-sonarjs": "^0.24.0",
     "eslint-plugin-unicorn": "^51.0.1",
     "husky": "^9.0.11",
+    "lerna": "^8.1.2",
     "lint-staged": "^15.2.2",
     "prettier": "^3.2.5",
     "ts-node": "^10.9.2",

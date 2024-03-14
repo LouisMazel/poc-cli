@@ -19,9 +19,7 @@ module.exports = {
     project: ['./tsconfig.json'],
   },
   rules: {
-    'no-console': [
-      process.env.NODE_ENV === 'production' ? 'error' : 'warn',
-    ],
+    'no-console': [process.env.NODE_ENV === 'production' ? 'error' : 'warn'],
     'comma-dangle': 'off',
     'space-before-function-paren': 'off',
     'no-duplicate-imports': 'error',

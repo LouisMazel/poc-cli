@@ -1,8 +1,6 @@
 {
   "compilerOptions": {
-    "lib": [
-      "ESNext"
-    ],
+    "lib": ["ESNext"],
     "moduleResolution": "node",
     "module": "ESNext",
     "target": "ESNext",
@@ -17,19 +15,17 @@
     "noImplicitAny": true,
     "inlineSourceMap": false,
     "isolatedModules": true,
-    "useUnknownInCatchVariables": false,
+    "useUnknownInCatchVariables": false
   },
   "include": [
+    "*.ts",
     "bin/**/*",
     "src/**/*",
     "*.config.mts",
     "prettier.config.cjs",
-    ".eslintrc.cjs",
+    ".eslintrc.cjs"
   ],
-  "exclude": [
-    "node_modules",
-    "dist"
-  ],
+  "exclude": ["node_modules", "dist"],
   "ts-node": {
     "esm": true,
     "experimentalSpecifierResolution": "node"
