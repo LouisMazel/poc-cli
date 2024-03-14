@@ -3,7 +3,7 @@
   "description": "Adeo CLI",
   "author": "Loïc Mazuel",
   "license": "MIT",
-  "version": "0.0.1",
+  "version": "0.0.0",
   "main": "./dist/cli.mjs",
   "types": "./dist/cli.d.ts",
   "engines": {
@@ -38,7 +38,11 @@
     "*.{js,ts,mjs,mts,cjs}": "cross-env NODE_ENV=production eslint --fix"
   },
   "devDependencies": {
+    "@commitlint/cli": "^19.1.0",
+    "@commitlint/config-conventional": "^19.1.0",
+    "@commitlint/cz-commitlint": "^19.1.0",
     "@typescript-eslint/eslint-plugin": "^7.2.0",
+    "@types/node": "^20.11.27",
     "cross-env": "^7.0.3",
     "eslint": "^8.57.0",
     "eslint-config-prettier": "^9.1.0",
@@ -53,7 +57,9 @@
     "typescript": "^5.4.2",
     "unbuild": "^2.0.0"
   },
-  "dependencies": {
-    "@types/node": "^20.11.27"
+  "config": {
+    "commitizen": {
+      "path": "@commitlint/cz-commitlint"
+    }
   }
 }
