@@ -1,0 +1,33 @@
+name: Builds
+
+on:
+  pull_request:
+
+jobs:
+  builds:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - uses: pnpm/action-setup@v2
+        with:
+          version: latest
+
+      - name: Use Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '21'
+          cache: 'pnpm'
+
+      - name: Install dependencies
+        run: pnpm install
+
+      - name: List
+        run: ls .
+
+      - name: List src
+        run: ls ./src
+
+      - name: Build lib
+        run: pnpm build
