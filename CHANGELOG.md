@@ -1,5 +1,28 @@
 # Changelog
 
+## v0.1.0...v0.1.1
+
+[compare changes](https://github.com/LouisMazel/poc-cli/compare/v0.1.0...v0.1.1)
+
+### 📖 Documentation
+
+- Document cli in README ([c7b6985](https://github.com/LouisMazel/poc-cli/commit/c7b6985))
+- Document cli in README ([5b591b3](https://github.com/LouisMazel/poc-cli/commit/5b591b3))
+- Documentation improvement in README ([b7b8ee1](https://github.com/LouisMazel/poc-cli/commit/b7b8ee1))
+
+### 🏡 Chore
+
+- Add CHANGELOG file ([eaf3aa5](https://github.com/LouisMazel/poc-cli/commit/eaf3aa5))
+- Add type checking in huski precommit hook ([a72b4f5](https://github.com/LouisMazel/poc-cli/commit/a72b4f5))
+
+### ✅ Tests
+
+- Add unit tests ([d46d5bc](https://github.com/LouisMazel/poc-cli/commit/d46d5bc))
+
+### ❤️ Contributors
+
+- LouisMazel <me@loicmazuel.com>
+
 ## v0.1.0...v0.1.0
 
 [compare changes](https://github.com/LouisMazel/poc-cli/compare/v0.1.0...v0.1.0)
