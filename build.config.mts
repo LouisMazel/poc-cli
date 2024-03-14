@@ -12,7 +12,7 @@ export default defineBuildConfig([
         exportConditions: ['production', 'node'],
       },
     },
-    entries: ['src/cli'],
+    entries: ['./src/cli.ts'],
     outDir: 'dist',
     clean: true,
     externals: [],
