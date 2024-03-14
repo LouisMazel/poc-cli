@@ -1,20 +1,43 @@
-# Javascript developer test
+# ADEO-CLI
 
-## Filter
+## Pre-requisites
 
-Your job is to write a command-line interface in Node.js.
-This program has to filter a list of elements containing a pattern.
+- Node.js 21.0.0 or higher
+- PNPM 8.0.0 or higher
 
-Details:
+## Installation
 
-- In the following file `data.js`, there are `Countries` containing `Peoples` containing `Animals`.
-- Only animals containing the pattern passed as argument (e.g. `ry`) are displayed. The order should be kept intact.
-- Empty arrays after filtering are NOT returned.
+Install the dependencies, run:
 
-Sample of running the command, and its output:
+```bash
+pnpm install
+```
 
-```shell script
-$ node app.js --filter=ry
+## Usage
+
+### Run built CLI
+
+```bash
+pnpm build && pnpm start
+```
+
+### Run CLI with Typescript (development)
+
+```bash
+pnpm cli
+```
+
+## Commands
+
+### Filtering database by animal name pattern
+
+Use the flag `--filter={pattern}` to filter the database by animal names that match the pattern.
+
+```bash
+node app.js --filter=ry
+
+Results:
+
 [
   {
     name: 'Uzuzozne',
@@ -45,14 +68,15 @@ $ node app.js --filter=ry
 ]
 ```
 
-## Count
+### Count
 
-The next goal is to print the counts of and Animals by counting the number of children and appending it in the name, eg. `Satanwi [2]`.
+Use the flag `--count` to count the number in each country and the number of animals each person has.
 
-Sample of running the command, and its output:
-
-```shell script
+```bash
 node app.js --count
+
+Results:
+
 [ { name: 'Dillauti [5]',
     people:
      [ { name: 'Winifred Graham [6]',
@@ -78,14 +102,48 @@ node app.js --count
 ]
 ```
 
-## Requirements
+## Development
 
-- The code must be available in a GIT repository
-- No library/modules should be used, except for the testing library
+### Lint and format code
 
-## Appreciation
+> ESLint is used to lint the code.
 
-We will be really attentive to:
+To lint the code, run:
 
-- Code readability, structure and consistency
-- Tests, and how they are written
+```bash
+pnpm lint
+```
+
+To format the code with prettier, run:
+
+```bash
+pnpm format
+```
+
+### Test
+
+> Vitest is used to run the tests.
+
+To run the tests, run:
+
+```bash
+pnpm test
+```
+
+## Release new version
+
+> Use lerna and changelogen
+
+To release a new version, run:
+
+```bash
+pnpm release
+```
+
+This command will:
+
+- Bump the version in the `package.json` file
+- Create a new tag in the repository
+- Push the new tag to the repository
+- Generate a new release in the CHANGELONG.md file
+- Publish this release in the repository
