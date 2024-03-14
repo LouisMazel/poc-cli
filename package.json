@@ -37,7 +37,8 @@
     "release:changelogen": "node --loader ts-node/esm --no-warnings ./changelog-generate.ts",
     "test": "vitest --silent",
     "test:coverage": "vitest --silent run --coverage",
-    "test:coverage:watch": "vitest --silent --coverage --watch"
+    "test:coverage:watch": "vitest --silent --coverage --watch",
+    "typecheck": "tsc --noEmit --skipLibCheck"
   },
   "lint-staged": {
     "*": "prettier -w -u",
